@@ -1,13 +1,3 @@
-# TODO
-#19:24:47  glen> kernelupdatenotifier.cpp:10:19: error: QObject: No such file or directory
-#19:24:47  glen> kernelupdatenotifier.cpp:11:20: error: QProcess: No such file or directory
-#19:24:47  glen> kernelupdatenotifier.cpp:12:28: error: QCoreApplication: No such file or directory
-# these are missing from kde4-kdelibs-devel?
-#19:24:58  glen> /usr/include/kconfigbase.h:29:27: error: QtCore/QtGlobal: No such file or directory
-#19:25:05  glen> /usr/include/kconfig.h:31:26: error: QtCore/QString: No such file or directory
-#19:25:05  glen> /usr/include/kconfig.h:32:27: error: QtCore/QVariant: No such file or directory
-#19:25:05  glen> /usr/include/kconfig.h:33:29: error: QtCore/QByteArray: No such file or directory
-#19:25:05  glen> /usr/include/kconfig.h:34:24: error: QtCore/QList: No such file or directory
 %define		appname	kernelupdatenotifier
 Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
