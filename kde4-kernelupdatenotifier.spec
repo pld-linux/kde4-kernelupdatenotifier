@@ -33,7 +33,7 @@ Powiadomienie o zaktualizowanym kernelu dla KDE4
 
 %build
 %{__make} \
-	INCPATH+="-I/usr/include -I/usr/include/KDE" \
+	INCPATH+="-I/usr/include -I/usr/include/KDE -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I." \
 	LIBS+="-lknotifyconfig -lkworkspace -lkdeui"
 
 %install
