@@ -2,12 +2,12 @@
 Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
 Name:		kde4-%{appname}
-Version:	1.0
+Version:	1.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{appname}-%{version}.tar.gz
-# Source0-md5:	dc77fa4e127948a8c305edc5189f9bf0
+# Source0-md5:	e85e5933430132231924e26d0d53a010
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
