@@ -2,12 +2,13 @@
 Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
 Name:		kde4-%{appname}
-Version:	1.1
+Version:	1.1.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{appname}-%{version}.tar.gz
-# Source0-md5:	893c98029d54ed7417e1301774460733
+# Source0-md5:	908fd0a521b87b75168f020b648cdf03
+BuildRequires:	cmake
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,18 +20,23 @@ Kernel Update Notifier for KDE4.
 Powiadomienie o zaktualizowanym kernelu dla KDE4.
 
 %prep
-%setup -q -n %{appname}
+%setup -q -n %{appname}-%{version}
 
 %build
-%{__make} \
-	INCPATH+="-I/usr/include -I/usr/include/KDE -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I." \
-	LIBS+="-lknotifyconfig -lkworkspace -lkdeui"
+install -d build
+cd build
+%cmake \
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	../
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/apps/kernelupdatenotifier}
+
+%{__make} -C build install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT%{_datadir}/apps/kernelupdatenotifier
 install *.notifyrc $RPM_BUILD_ROOT%{_datadir}/apps/kernelupdatenotifier
-install kernelupdatenotifier $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
