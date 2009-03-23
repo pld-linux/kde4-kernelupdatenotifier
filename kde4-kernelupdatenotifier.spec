@@ -7,7 +7,7 @@ Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{appname}-%{version}.tar.gz
-# Source0-md5:	e85e5933430132231924e26d0d53a010
+# Source0-md5:	893c98029d54ed7417e1301774460733
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
