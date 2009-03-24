@@ -1,4 +1,5 @@
 %define		appname	kernelupdatenotifier
+
 Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
 Name:		kde4-%{appname}
@@ -11,6 +12,7 @@ Source0:	%{appname}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
+Suggests:	kernel-desktop
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
