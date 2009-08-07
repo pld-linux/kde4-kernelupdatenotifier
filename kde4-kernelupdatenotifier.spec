@@ -4,7 +4,7 @@ Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
 Name:		kde4-%{appname}
 Version:	1.1.2
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{appname}-%{version}.tar.gz
