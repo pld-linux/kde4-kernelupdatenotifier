@@ -28,6 +28,7 @@ Powiadomienie o zaktualizowanym kernelu dla KDE4.
 install -d build
 cd build
 %cmake \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	../
 
