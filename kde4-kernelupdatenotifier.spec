@@ -9,9 +9,13 @@ License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{appname}-%{version}.tar.gz
 # Source0-md5:	87f53d06444ada673a176e5cadfe9c2c
+BuildRequires:	QtSvg-devel
+BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 Suggests:	kernel-desktop
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
