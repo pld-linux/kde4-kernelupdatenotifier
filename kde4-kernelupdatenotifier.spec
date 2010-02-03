@@ -11,7 +11,8 @@ License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{orgname}-%{version}.tar.gz
 # Source0-md5:	87f53d06444ada673a176e5cadfe9c2c
-BuildRequires:	QtSvg-devel >= %{qtver}
+BuildRequires:  QtCore-devel >= %{qtver}
+BuildRequires:  QtGui-devel >= %{qtver}
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.6.3
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
