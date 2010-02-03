@@ -1,21 +1,23 @@
-%define		appname	kernelupdatenotifier
+%define		orgname	kernelupdatenotifier
+%define		qtver	4.5.3
+%define		kdever	4.3.5
 
 Summary:	Kernel Update Notifier for KDE4
 Summary(pl.UTF-8):	Powiadomienie o zaktualizowanym kernelu dla KDE4
-Name:		kde4-%{appname}
+Name:		kde4-%{orgname}
 Version:	1.1.2
 Release:	3
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	%{appname}-%{version}.tar.gz
+Source0:	%{orgname}-%{version}.tar.gz
 # Source0-md5:	87f53d06444ada673a176e5cadfe9c2c
-BuildRequires:	QtSvg-devel
-BuildRequires:	automoc4
-BuildRequires:	cmake
-BuildRequires:	kde4-kdebase-workspace-devel
-BuildRequires:	kde4-kdelibs-devel
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	QtSvg-devel >= %{qtver}
+BuildRequires:	automoc4 >= 0.9.88
+BuildRequires:	cmake >= 2.6.3
+BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
+BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 Suggests:	kernel-desktop
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,7 +28,7 @@ Kernel Update Notifier for KDE4.
 Powiadomienie o zaktualizowanym kernelu dla KDE4.
 
 %prep
-%setup -q -n %{appname}-%{version}
+%setup -q -n %{orgname}-%{version}
 
 %build
 install -d build
