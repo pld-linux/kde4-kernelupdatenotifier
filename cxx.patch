@@ -1,0 +1,11 @@
+--- kernelupdatenotifier-1.1.2/kernelupdatenotifier.cpp~	2009-08-07 18:27:39.000000000 +0200
++++ kernelupdatenotifier-1.1.2/kernelupdatenotifier.cpp	2019-10-05 21:31:03.656445529 +0200
+@@ -38,7 +38,7 @@
+ 
+ void KernelUpdateNotifier::handleRebootActionClosed()
+ {
+-	kDebug("Don't Reboot");
++	kDebug() << "Don't Reboot";
+ 	QApplication::quit();
+ }
+ 
